@@ -1,7 +1,7 @@
 {
   "name": "mod-10-svg-logo-maker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Week 10 homework challenge.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "ds-store": "^0.1.6",
-    "inquirer": "^8.2.4",
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
     "jest": "^29.6.1"
   }
 }
