@@ -26,10 +26,11 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 ## Sources
 
-Parameters for basic shapes: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
-npm modules: https://www.npmjs.com/
-Reused similar code from last homework: https://github.com/douglasmarsalis/mod-9-pro-readme-gen
-Special thanks to my tutor Ben.
+* Parameters for basic shapes: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
+* npm modules: https://www.npmjs.com/
+* Hexadecimal color codes: https://www.w3schools.com/colors/colors_picker.asp 
+* Reused similar code from last homework: https://github.com/douglasmarsalis/mod-9-pro-readme-gen
+* Special thanks to my tutor Ben.
 ## Link to Deployed Site
 
 There is no deployed site for this application.
