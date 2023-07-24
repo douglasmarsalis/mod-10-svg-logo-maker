@@ -12,5 +12,19 @@ const generateShapes = require("./lib/shapes").shapes;
 const writeFileAsync = lib.promisify(fs.writeFile);
 
 //This function will init the application to create a SVG logo file
+async function init() {
+    try {
+        const answers = await inquirer.prompt(questions);
+        console.log(answers.____);
+        answers.______ = ______(answers._____);
+        console.log(answers.______);
+        let ______ = ______(answers);
+        await writeFileAsync("logo.svg", _____);
+    }   catch (err) {
+        throw err;
+    }
+}
 
+//This function will call to initialize the application
+init();
 
