@@ -4,13 +4,6 @@ const inquirer = require("inquirer");
 const questions = require("./lib/questions");
 const {Triangle, Square, Circle} = require("./lib/shapes");
 
-//Variables needed for connecting modules to the application
-//const questions = require("./lib/questions").questions;
-//const generateShapes = require("./lib/shapes").shapes;
-
-//Variable for async await 
-//const writeFileAsync = lib.promisify(fs.writeFile);
-
 // Function takes user input and and places it into a string
 // Width and height are set for the logo size
 // xmlns specifies the xml namespace for a document
@@ -25,13 +18,13 @@ function writeToFile(fileName, answers) {
     let shapeChoice;
     if (answers.shape === "Triangle") {
         shapeChoice = new Triangle();
-        //svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeColor}"/>`;
+    
     } else if (answers.shape === "Square") {
         shapeChoice = new Square();
-        //svgString += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeColor}"/>`;
+    
     } else {
         shapeChoice = new Circle();
-        //svgString += `<circle cx="150" cy="115" r="80" fill="${answers.shapeColor}"/>`;
+    
     }
     shapeChoice.setColor(answers.shapeColor);
     svgString += shapeChoice.render();
