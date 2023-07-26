@@ -11,6 +11,41 @@ const {Triangle, Square, Circle} = require("./lib/shapes");
 //Variable for async await 
 //const writeFileAsync = lib.promisify(fs.writeFile);
 
+// Function takes user input and and places it into a string
+// Width and height are set for the logo size
+// xmlns specifies the xml namespace for a document
+// g element is a container element for grouping together related graphic elements
+function writeToFile(fileName, answers) {
+    let svgString = "";
+    svgString =
+        '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
+    svgString += "<g>";
+    svgString += `${answers.shape}`;
+
+    let shapeChoice;
+    if (answers.shape === "Triangle") {
+        shapeChoice = new Triangle();
+        svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeColor}"/>`;
+    } else if (answers.shape === "Square") {
+        shapeChoice = new Square();
+        svgString += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeColor}"/>`;
+    } else {
+        shapeChoice = new Circle();
+        svgString += `<circle cx="150" cy="115" r="80" fill="${answers.shapeColor}"/>`;
+    }
+
+//Concantenates the strings to create the logo    
+    svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
+    svgString += "</g>";
+    svgString += "</svg>";
+
+//if then to write file for generating the logo    
+    fs.writeFile(fileName, svgString, (err) => {
+        err ? console.log(err) : console.log("Generated logo.svg");
+    });
+}
+
+
 //This function will init the application to create a SVG logo file
 async function init() {
     try {
@@ -54,16 +89,14 @@ function colorCheck(color) {
 
 //This function will check the character length for the logo.svg
     .then((answers) => {
-    function text(length) {
         if (answers.text.length > 3) {
             console.log("Sorry, please enter no more than 3 characters!");
             promptUser();
         }  else {
             fs.writeFile("logo.svg", answers);
         }
-        });    
-}
+    });    
 
-//This function will call to initialize the application
+//This will call to initialize the application
 init();
 
