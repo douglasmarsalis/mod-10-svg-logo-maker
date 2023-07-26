@@ -30,6 +30,10 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 * npm modules: https://www.npmjs.com/
 * Hexadecimal color codes: https://www.w3schools.com/colors/colors_picker.asp 
 * Reused similar code from last homework: https://github.com/douglasmarsalis/mod-9-pro-readme-gen
+* Code ideas: https://github.com/rmessett15/SVG-Logo-Maker/tree/main
+* svg data: https://www.w3.org/TR/SVG/
+* Node documentation: https://nodejs.org/docs/latest-v4.x/api/fs.html#fs_fs_writefile_file_data_options_callback
+* Svg Tutorial: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial
 * Special thanks to my tutor Ben.
 ## Link to Deployed Site
 
@@ -39,6 +43,9 @@ There is no deployed site for this application.
 https://github.com/douglasmarsalis/mod-10-svg-logo-maker
 ## Screenshots and Video
 
+
+
+![Screen shot of my markdown](images/SVG_logo_screenshot.png)
 ## License
 MIT License
 
