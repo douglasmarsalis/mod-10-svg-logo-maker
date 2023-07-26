@@ -3,7 +3,11 @@
 ## [![License: APACHE2.0](https://img.shields.io/badge/License:_MIT-orange)](https://opensource.org/license/mit/)
 
 ## Description
-
+* For this project, I will create an application that will enable a user to create a svg logo.
+* This application will feature Node.js and use npm dependencies inquirer and jest.
+* I will also test the application using jest and make sure that it passes the test.
+* I will make sure that my code follows industry standards and is sourced correctly.
+* By building this application, it has helped me to learn information on Node.js, npm, jest, svg, and other info.
 ## User Story
 AS a freelance web developer
 I WANT to generate a simple logo for my projects
