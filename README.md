@@ -43,6 +43,10 @@ There is no deployed site for this application.
 https://github.com/douglasmarsalis/mod-10-svg-logo-maker
 ## Screenshots and Video
 
+[svg_logo_create.webm](https://github.com/douglasmarsalis/mod-10-svg-logo-maker/assets/112460009/d6710783-98f0-4f1a-9bf1-399312d76f2d)
+
+
+[shapes_test_vid.webm](https://github.com/douglasmarsalis/mod-10-svg-logo-maker/assets/112460009/133ce565-441a-4ec8-a531-3377ffe09d60)
 
 
 ![Screen shot of my markdown](images/SVG_logo_screenshot.png)
