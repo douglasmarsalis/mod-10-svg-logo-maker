@@ -25,14 +25,16 @@ function writeToFile(fileName, answers) {
     let shapeChoice;
     if (answers.shape === "Triangle") {
         shapeChoice = new Triangle();
-        svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeColor}"/>`;
+        //svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeColor}"/>`;
     } else if (answers.shape === "Square") {
         shapeChoice = new Square();
-        svgString += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeColor}"/>`;
+        //svgString += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeColor}"/>`;
     } else {
         shapeChoice = new Circle();
-        svgString += `<circle cx="150" cy="115" r="80" fill="${answers.shapeColor}"/>`;
+        //svgString += `<circle cx="150" cy="115" r="80" fill="${answers.shapeColor}"/>`;
     }
+    shapeChoice.setColor(answers.shapeColor);
+    svgString += shapeChoice.render();
 
 //Concantenates the strings to create the logo    
     svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
@@ -54,12 +56,10 @@ async function init() {
 
         colorCheck(answers.shapeColor);
         colorCheck(answers.textColor);
+        checkLength(answers.text);
 
         let svgData = JSON.stringify(answers);
-        fs.writeFile("logo.svg", svgData, (err) => {
-            if (err) throw err;
-            console.log('It\'s saved!');
-        });
+        writeToFile("logo.svg", answers);
     }   catch (err) {
         throw err;
     }
@@ -88,14 +88,12 @@ function colorCheck(color) {
 };
 
 //This function will check the character length for the logo.svg
-    .then((answers) => {
-        if (answers.text.length > 3) {
+    function checkLength (string) {
+        if (string.length > 3) {
             console.log("Sorry, please enter no more than 3 characters!");
-            promptUser();
-        }  else {
-            fs.writeFile("logo.svg", answers);
-        }
-    });    
+            process.exit();
+        } 
+    };    
 
 //This will call to initialize the application
 init();
